@@ -781,9 +781,7 @@
             navigator.serviceWorker.register(swUrl).then(() => console.log('SW OK')).catch(e => console.log('SW fail', e));
             window.swRegistered = true;
         }
-          if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
-  }
+   
     </script>
 </head>
 <body class="dark-theme">
@@ -838,5 +836,10 @@
 <div id="topPanel" class="top-overlay hidden"><div class="top-card"><button id="closeTopBtn" class="close-icon"><i class="fas fa-times"></i></button><div id="topTableContainer"></div></div></div>
 
 <div id="recordsPanel" class="records-overlay hidden"><div class="records-card"><button id="closeRecordsBtn" class="close-icon"><i class="fas fa-times"></i></button><h3><i class="fas fa-chart-line"></i> Рекордҳо</h3><div class="records-tabs"><button id="recordsToday" class="btn-icon">Имрӯз</button><button id="recordsWeek" class="btn-icon">Ҳафта</button><button id="recordsMonth" class="btn-icon">Моҳ</button></div><div id="recordsContainer"></div></div></div>
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/it-kodvill/sw.js');
+  }
+</script>
 </body>
 </html>
